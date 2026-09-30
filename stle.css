@@ -1,0 +1,244 @@
+/* =========================
+   พื้นฐานของเว็บไซต์
+========================= */
+
+{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, "Tahoma", sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background: #f7f5f0;
+    color: #222;
+}
+
+
+/* =========================
+   ส่วนหัวเว็บไซต์
+========================= */
+
+header {
+    background: linear-gradient(135deg, #071a33, #123b63);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 50%;
+    right: -100px;
+    top: -120px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 42px;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 15px 0 0;
+    font-size: 18px;
+    color: #e5d39a;
+}
+
+
+/* =========================
+   ส่วนเนื้อหา
+========================= */
+
+section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+section h2 {
+    color: #0b2a4a;
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    position: relative;
+    padding-left: 18px;
+}
+
+section h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 5px;
+    height: 28px;
+    background: #c9a227;
+    border-radius: 5px;
+}
+
+section p {
+    color: #555;
+    font-size: 16px;
+}
+
+
+/* =========================
+   กล่องผลงาน
+========================= */
+
+.project {
+    background: #faf9f5;
+    border-left: 4px solid #c9a227;
+    padding: 22px 25px;
+    margin-bottom: 20px;
+    border-radius: 0 12px 12px 0;
+    transition: 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.project h3 {
+    margin: 0 0 8px;
+    color: #123b63;
+    font-size: 21px;
+}
+
+.project p {
+    margin: 0;
+}
+
+
+/* =========================
+   ทักษะ
+========================= */
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+li {
+    background: #f7f5f0;
+    border: 1px solid #e5dfcf;
+    padding: 15px 18px;
+    border-radius: 10px;
+    color: #333;
+    transition: 0.3s ease;
+}
+
+li::before {
+    content: "◆";
+    color: #c9a227;
+    margin-right: 10px;
+}
+
+li:hover {
+    background: #123b63;
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   เป้าหมาย
+========================= */
+
+#goal {
+    background: linear-gradient(135deg, #0b2a4a, #123b63);
+    color: white;
+}
+
+#goal h2 {
+    color: white;
+}
+
+#goal p {
+    color: #e8edf3;
+}
+
+
+/* =========================
+   ส่วนติดต่อ
+========================= */
+
+footer {
+    text-align: center;
+    padding: 45px 20px;
+    background: #071a33;
+    color: white;
+    margin-top: 60px;
+}
+
+footer h2 {
+    color: #e5d39a;
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+footer a {
+    color: #e5d39a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   มือถือ
+========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 60px 20px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    section {
+        margin: 25px 15px;
+        padding: 25px 20px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    ul {
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+        padding: 18px;
+    }
+}
